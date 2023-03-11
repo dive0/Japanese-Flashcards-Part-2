@@ -1,0 +1,56 @@
+[
+  {
+    "word": "Start!",
+    "translation": "Press button to start"
+  },
+  {
+    "word": "song",
+    "translation": "うた",
+    "image": "https://domf5oio6qrcr.cloudfront.net/medialibrary/9270/iStock-678064058-rev.jpg"
+  },
+  {
+    "word": "apartment",
+    "translation": "アパート",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jGAdJUTgZzNwc8eNYu52dIqa0GANxHT0ug&usqp=CAU"
+  },
+  {
+    "word": "older sister",
+    "translation": "おねえさん",
+    "image": "https://www.sheknows.com/wp-content/uploads/2018/08/abyhzoa0kkom7exoer2r.jpeg?resize=1280,854"
+  },
+  {
+    "word": "older brother",
+    "translation": "おにいさん",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRKEBngG8NZx4WClMdeyMWaI-9S23PtWUEBA&usqp=CAU"
+  },
+  {
+    "word": "mouth",
+    "translation": "くち",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs3v9dOaCaTSXqpuLYjFygXYO7WIYwfS0aKw&usqp=CAU"
+  },
+  {
+    "word": "eye",
+    "translation": "め",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSwkaNmK_y1PUAPQoP0stHiUUZSTrKviAHA&usqp=CAU"
+  },
+  {
+    "word": "cafeteria; dining commons",
+    "translation": "しょくどう",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5nOnmTW_ARBP7z5ei9pQcRUP_b2xzfzDzWw&usqp=CAU"
+  },
+  {
+    "word": "summer",
+    "translation": "なつ",
+    "image": "https://media.cntraveler.com/photos/5ca2606227413200230736ae/master/pass/Summer-Travel_Gettyimages-1028278382.jpg"
+  },
+  {
+    "word": "winter",
+    "translation": "ふゆ",
+    "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/trees-on-snow-covered-landscape-in-heavy-snow-day-royalty-free-image-1634585533.jpg"
+  },
+  {
+    "word": "spring",
+    "translation": "はる",
+    "image": "https://media.timeout.com/images/103273081/750/562/image.jpg"
+  }
+]
