@@ -61,6 +61,7 @@ button:disabled {
   cursor: default;
   background-color: grey;
   color: black;
+  border: none;
 }
 
 button:focus,

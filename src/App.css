@@ -21,3 +21,25 @@ img {
   width: 100px;
   height: 100px;
 }
+
+.container {
+  margin: 10px;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input {
+  font-size: 1rem;
+  margin-right: 10px;
+  background-color: white;
+  color: black;
+}
+
+.submitButton {
+  font-size: 1rem;
+  background-color: rgb(138, 171, 232);
+  border-radius: 100em;
+}

@@ -38,7 +38,6 @@ const Cards = (props) => {
 
   const handleInput = (e) => {
     setInput(e.target.value);
-    console.log(input)
   };
 
   const onCheckAnswer = (e) => {
@@ -56,6 +55,7 @@ const Cards = (props) => {
       setWordIndex(wordIndex + 1);
       setFlipCard(false);
       setPrevWordIndex([...prevWordIndex, wordIndex]);
+      setInput("")
     }
   };
 
@@ -64,7 +64,6 @@ const Cards = (props) => {
       setWordIndex(prevWordIndex[prevWordIndex.length - 1]);
       setFlipCard(false);
       setPrevWordIndex(prevWordIndex.slice(0, prevWordIndex.length - 1));
-      console.log(prevWordIndex);
     }
   };
 
@@ -75,7 +74,7 @@ const Cards = (props) => {
       </div>
 
       <form className="container">
-        <label htmlFor="answer">Type you answer:</label>
+        <label htmlFor="answer">Type you answer: </label>
         <input
           type="text"
           id="answer"
