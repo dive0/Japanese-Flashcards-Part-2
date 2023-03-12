@@ -3,7 +3,7 @@ import Phrase from "./Phrase";
 import wordList from "./WordList.json";
 
 const Cards = (props) => {
-  const { setCardCount } = props;
+  const { setCardCount, currentStreak, setCurrentStreak, longestStreak, setLongestStreak } = props;
   const [wordIndex, setWordIndex] = useState(0);
   const [word, setWord] = useState(wordList[0].word);
   const [image, setImage] = useState("");
@@ -45,8 +45,13 @@ const Cards = (props) => {
 
     if (input === wordList[wordIndex].translation) {
       alert("Correct!");
+      setCurrentStreak((prevStreak) => prevStreak + 1)
     } else {
       alert("Incorrect!");
+      if (currentStreak > longestStreak || longestStreak === undefined) {
+        setLongestStreak(currentStreak);
+      }
+      setCurrentStreak(0);
     }
   };
 
@@ -64,6 +69,7 @@ const Cards = (props) => {
       setWordIndex(prevWordIndex[prevWordIndex.length - 1]);
       setFlipCard(false);
       setPrevWordIndex(prevWordIndex.slice(0, prevWordIndex.length - 1));
+      setInput("")
     }
   };
 
