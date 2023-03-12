@@ -3,7 +3,13 @@ import Phrase from "./Phrase";
 import wordList from "./WordList.json";
 
 const Cards = (props) => {
-  const { setCardCount, currentStreak, setCurrentStreak, longestStreak, setLongestStreak } = props;
+  const {
+    setCardCount,
+    currentStreak,
+    setCurrentStreak,
+    longestStreak,
+    setLongestStreak,
+  } = props;
   const [wordIndex, setWordIndex] = useState(0);
   const [word, setWord] = useState(wordList[0].word);
   const [image, setImage] = useState("");
@@ -27,15 +33,6 @@ const Cards = (props) => {
     }
   };
 
-  // const nextWord = () => {
-  //   let randomNum = wordIndex;
-  //   while (randomNum === wordIndex) {
-  //     randomNum = Math.floor(Math.random() * (wordList.length - 1 - 1 + 1)) + 1;
-  //   }
-  //   setWordIndex(randomNum);
-  //   setFlipCard(false);
-  // };
-
   const handleInput = (e) => {
     setInput(e.target.value);
   };
@@ -45,7 +42,7 @@ const Cards = (props) => {
 
     if (input === wordList[wordIndex].translation) {
       alert("Correct!");
-      setCurrentStreak((prevStreak) => prevStreak + 1)
+      setCurrentStreak((prevStreak) => prevStreak + 1);
     } else {
       alert("Incorrect!");
       if (currentStreak > longestStreak || longestStreak === undefined) {
@@ -60,7 +57,7 @@ const Cards = (props) => {
       setWordIndex(wordIndex + 1);
       setFlipCard(false);
       setPrevWordIndex([...prevWordIndex, wordIndex]);
-      setInput("")
+      setInput("");
     }
   };
 
@@ -69,7 +66,7 @@ const Cards = (props) => {
       setWordIndex(prevWordIndex[prevWordIndex.length - 1]);
       setFlipCard(false);
       setPrevWordIndex(prevWordIndex.slice(0, prevWordIndex.length - 1));
-      setInput("")
+      setInput("");
     }
   };
 

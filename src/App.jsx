@@ -14,7 +14,13 @@ const App = () => {
       <h2>Number of cards: {cardCount}</h2>
       <h3>Current Streak: {currentStreak}</h3>
       <h3>Longest Streak: {longestStreak}</h3>
-      <Cards setCardCount={setCardCount} currentStreak={currentStreak} setCurrentStreak={setCurrentStreak} longestStreak={longestStreak} setLongestStreak={setLongestStreak}/>
+      <Cards
+        setCardCount={setCardCount}
+        currentStreak={currentStreak}
+        setCurrentStreak={setCurrentStreak}
+        longestStreak={longestStreak}
+        setLongestStreak={setLongestStreak}
+      />
     </div>
   );
 };
