@@ -10,6 +10,7 @@ const Cards = (props) => {
   setCardCount(wordList.length - 1);
   const [flipCard, setFlipCard] = useState(false);
   const [prevWordIndex, setPrevWordIndex] = useState([]);
+  const [input, setInput] = useState("");
 
   useEffect(() => {
     setWord(wordList[wordIndex].word);
@@ -35,6 +36,21 @@ const Cards = (props) => {
   //   setFlipCard(false);
   // };
 
+  const handleInput = (e) => {
+    setInput(e.target.value);
+    console.log(input)
+  };
+
+  const onCheckAnswer = (e) => {
+    e.preventDefault();
+
+    if (input === wordList[wordIndex].translation) {
+      alert("Correct!");
+    } else {
+      alert("Incorrect!");
+    }
+  };
+
   const nextWord = () => {
     if (prevWordIndex.length < wordList.length - 1) {
       setWordIndex(wordIndex + 1);
@@ -48,17 +64,39 @@ const Cards = (props) => {
       setWordIndex(prevWordIndex[prevWordIndex.length - 1]);
       setFlipCard(false);
       setPrevWordIndex(prevWordIndex.slice(0, prevWordIndex.length - 1));
-      console.log(prevWordIndex)
+      console.log(prevWordIndex);
     }
-  }
+  };
 
   return (
     <div className="Cards">
       <div className="word" onClick={flip}>
         <Phrase word={word} image={image} />
       </div>
-      <button onClick={prevWord} disabled={wordIndex === 0}>Back</button>
-      <button onClick={nextWord} disabled={wordIndex === wordList.length - 1}>Next</button>
+
+      <form className="container">
+        <label htmlFor="answer">Type you answer:</label>
+        <input
+          type="text"
+          id="answer"
+          name="answer"
+          placeholder="Answer"
+          value={input}
+          required
+          onChange={handleInput}
+        />
+
+        <button type="submit" className="submitButton" onClick={onCheckAnswer}>
+          Submit Answer
+        </button>
+      </form>
+
+      <button onClick={prevWord} disabled={wordIndex === 0}>
+        Back
+      </button>
+      <button onClick={nextWord} disabled={wordIndex === wordList.length - 1}>
+        Next
+      </button>
     </div>
   );
 };
